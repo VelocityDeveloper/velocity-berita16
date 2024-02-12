@@ -42,6 +42,7 @@ get_header();
                         echo '</div>';
                     endwhile; ?>
                 </div>
+		<?php justg_pagination();?>
 			<?php else : ?>
 				<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 			<?php endif; ?>
