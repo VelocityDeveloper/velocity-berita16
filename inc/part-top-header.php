@@ -19,9 +19,9 @@
                     </svg>',
                 ];
                 foreach ($sosmed as $key => $icon) {
-                    $datalink  = velocitytheme_option('link_sosmed_' . $key);
+                    $datalink  = get_theme_mod('link_sosmed_' . $key);
                     if ($datalink) {
-                        echo '<a class="btn btn-sm btn-'.$key.' ms-1 border-0 text-white py-1" href="' . $datalink . '" target="_blank">'.$icon.'</a>';
+                        echo '<a class="btn btn-sm btn-'.$key.' ms-1 border-0 text-white py-1" href="' . esc_url($datalink) . '" target="_blank" rel="noopener" aria-label="' . esc_attr(ucfirst($key)) . '">'.$icon.'</a>';
                     }
                 }
                 ?>
